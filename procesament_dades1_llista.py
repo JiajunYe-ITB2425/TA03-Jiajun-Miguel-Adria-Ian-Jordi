@@ -6,18 +6,18 @@ Asignatura: ASIXcB MDS TA03
 Descripció: llegueix les dades XML obtingudes per un fitxer i mostria per pantalla la informació obtinguda.
 '''
 
+# Módulos
 import xml.etree.ElementTree as ET
-from datetime import datetime
 
-archivo_xml = 'Incidencias2.0.xml'
+# Variables
+archivo_xml = 'incidencia.xml'
 lista = []
 
+# Declaración del archivo XML
 tree = ET.parse(archivo_xml)
 root = tree.getroot()
 
-#def data_valida(fila_data)
-
-
+# Bucle para hacer la lista
 for fila in root.findall('row'):
     fila_info = [
         fila.find('Marca_de_temps').text,
@@ -33,8 +33,7 @@ for fila in root.findall('row'):
         fila.find('NIVELL_URGENCIA_DE_SOLUCIÓ').text
     ]
 
-    # Añadir los datos de la fila a la lista
+    # Añade los datos de la fila a la lista
     lista.append(fila_info)
 
-# Imprimir la lista resultante
 print(lista)
