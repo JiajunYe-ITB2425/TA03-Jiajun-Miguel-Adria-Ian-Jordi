@@ -15,6 +15,9 @@ lista = []
 tree = ET.parse(archivo_xml)
 root = tree.getroot()
 
+#def data_valida(fila_data)
+
+
 for fila in root.findall('row'):
     fila_info = [
         fila.find('Marca_de_temps').text,
