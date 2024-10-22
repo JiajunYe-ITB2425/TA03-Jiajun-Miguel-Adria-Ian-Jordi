@@ -19,7 +19,7 @@ tree = ET.parse(archivo_xml)
 root = tree.getroot()
 
 def validar_fecha(fecha_incidencia):
-    if int(fecha_incidencia[6:10]) <= datetime.now().year and int(fecha_incidencia[3:5]) <= datetime.now().month and int(fecha_incidencia[3:5]) != "07" and int(fecha_incidencia[3:5]) != "08":
+    if int(fecha_incidencia[6:10]) <= datetime.now().year and int(fecha_incidencia[3:5]) <= datetime.now().month and int(fecha_incidencia[3:5]) != "07" and int(fecha_incidencia[3:5]) != "08" and int(fecha_incidencia[0:2]) <= datetime.now().day:
         return True
     else:
         return False
