@@ -41,6 +41,7 @@ def validar_aula(aula):
 
 # Bucle para hacer la lista
 for fila in root.findall('row'):
+
     # Variables para las funciones
     fecha_incidencia = fila.find('DATA_DE_LA_INCIDÈNCIA').text
     aula = fila.find('AULA_SALAConsulteu_cartell_d_entrada_a_l_aula_o_l_espai_També_disposeu_d_aquesta_informació_a_trainers_itb_cat_espais').text
@@ -60,10 +61,11 @@ for fila in root.findall('row'):
             'Descripció proposta de solució': fila.find('DESCRIPCIÓ_PROPOSTA_DE_SOLUCIOLa_vostra_resposta').text,
             'Nivell urgència de solució': fila.find('NIVELL_URGENCIA_DE_SOLUCIÓ').text
         }
+
         # Añade los datos de la fila a la lista
         lista.append(fila_info)
 
-# Output con formato
+# Output con formato (etiquetas, colores...)
 for i, incidencia in enumerate(lista, start=1):
     print(f"{RED}Incidència {i}:{RESET}")
     for k, v in incidencia.items():
