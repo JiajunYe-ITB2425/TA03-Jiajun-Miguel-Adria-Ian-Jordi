@@ -10,7 +10,7 @@ Descripció: llegueix les dades XML obtingudes per un fitxer i mostria per panta
 import xml.etree.ElementTree as ET
 
 # Variables
-archivo_xml = 'incidencia.xml'
+archivo_xml = 'incidencies.xml'
 lista = []
 
 # Declaración del archivo XML
