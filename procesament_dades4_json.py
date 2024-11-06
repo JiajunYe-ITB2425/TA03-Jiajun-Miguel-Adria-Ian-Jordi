@@ -14,7 +14,7 @@ import json
 
 
 # Variables
-archivo_xml = 'incidencia.xml'
+archivo_xml = 'incidencies.xml'
 lista = []
 
 # Ens hem inventat una llista d'aules
