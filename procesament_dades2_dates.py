@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 # Variables
-archivo_xml = 'incidencia.xml'
+archivo_xml = 'incidencies.xml'
 lista = []
 
 # Declaración del archivo XML
